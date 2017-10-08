@@ -14,8 +14,6 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y --force-yes --no-install-recommends apache2 php7.0 php7.0-mysql php7.0-xml php7.0-gd php7.0-mbstring
 
-RUN sed -i 's/\/var\/www\/html/\/var\/www\/html\/web/' /etc/apache2/sites-available/000-default.conf
-
 ENV APACHE_CONFDIR /etc/apache2
 ENV APACHE_ENVVARS $APACHE_CONFDIR/envvars
 RUN set -ex \
