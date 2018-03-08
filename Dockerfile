@@ -12,7 +12,7 @@ RUN echo "deb http://packages.dotdeb.org jessie all\n" > /etc/apt/sources.list.d
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y --force-yes --no-install-recommends apache2 php7.0 php7.0-mysql php7.0-xml php7.0-gd php7.0-mbstring php7.0-curl
+    apt-get install -y --force-yes --no-install-recommends apache2 php7.0 php7.0-mysql php7.0-xml php7.0-gd php7.0-mbstring php7.0-curl git-core
 
 ENV APACHE_CONFDIR /etc/apache2
 ENV APACHE_ENVVARS $APACHE_CONFDIR/envvars
